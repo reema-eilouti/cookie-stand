@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+  }
+  
+
+  header nav ul {
+    list-style: none;
+  }
+
+
+  header nav ul li {
+    display: inline-block;
+    padding: 13px;
+    margin-inline: 29px;
+  }
+
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+
+  footer {
+      font-weight: bold;
+      padding: 5px;
+      position: static;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: antiquewhite;
+  }
+  nav {
+    font-weight: bold;
+    background-color: antiquewhite;
+}
