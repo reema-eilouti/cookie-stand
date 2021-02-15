@@ -19,20 +19,17 @@ Branch.prototype.setMaximumCustomersPerHour = function (min, max) { this.maximum
 Branch.prototype.setAverageCookiesPerCustomer = function (min, max) { this.averageCookiesPerCustomer = getRandomNumber(min, max); };
 
 Branch.prototype.render = function () {
-    let container = document.getElementById('Branches');
 
-    let h2El = document.createElement('h2');
-    container.appendChild(h2El);
-    h2El.textContent = this.name;
+    let dataRowEl = document.createElement('tr');
+    tableEl.appendChild(dataRowEl);
 
-    let ulEl = document.createElement('ul');
-    container.appendChild(ulEl);
+    let td1El = document.createElement('td');
+    dataRowEl.appendChild(td1El);
+    td1El.textContent = this.name;
 
     let totalCookies = 0;
 
     for (let i = 06; i < 20; i++) {
-        let liEl = document.createElement('li');
-        ulEl.appendChild(liEl);
 
         this.setMinimumCustomersPerHour(0, 5);
         this.setMaximumCustomersPerHour(6, 20);
@@ -44,14 +41,40 @@ Branch.prototype.render = function () {
 
         totalCookies += averageCookiesPerHour;
 
-        liEl.textContent = `${i}:00 -> ${averageCookiesPerHour} cookies.`;
+        let td2El = document.createElement('td');
+        dataRowEl.appendChild(td2El);
+        td2El.textContent = averageCookiesPerHour;
     }
 
-    let liEl = document.createElement('li');
-    ulEl.appendChild(liEl);
-    liEl.textContent = `Total: ${totalCookies} cookies.`;
+    let td3El = document.createElement('td');
+    dataRowEl.appendChild(td3El);
+    td3El.textContent = `${totalCookies} cookies`;
 
 };
+
+let container = document.getElementById('Branches');
+
+let tableEl = document.createElement('table');
+container.appendChild(tableEl);
+
+let headerRowEl = document.createElement('tr');
+tableEl.appendChild(headerRowEl);
+
+let th0El = document.createElement('th');
+headerRowEl.appendChild(th0El);
+th0El.textContent = 'Branch';
+
+for (let i = 06; i < 20; i++) {
+
+    let thEl = document.createElement('th');
+    headerRowEl.appendChild(thEl);
+    thEl.textContent = `${i}:00`;
+
+}
+
+let th14El = document.createElement('th');
+headerRowEl.appendChild(th14El);
+th14El.textContent = 'Daily Branch Total';
 
 
 let seattle = new Branch('Seattle');
@@ -65,3 +88,12 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+
+
+let footerRowEl = document.createElement('tr');
+tableEl.appendChild(footerRowEl);
+// footerRowEl.textContent = 'Totals';
+
+let tfEl = document.createElement('th');
+footerRowEl.appendChild(tfEl);
+tfEl.textContent = 'Totals';
