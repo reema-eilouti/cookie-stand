@@ -28,7 +28,6 @@ function createTableHeaders() {
 
 }
 
-
 function createTableFooter() {
 
     let footerRowEl = document.createElement('tr');
@@ -137,7 +136,6 @@ function createTableFooter() {
     footerRowEl.appendChild(td15El);
     td15El.textContent = totalColumn15;
 }
-
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
