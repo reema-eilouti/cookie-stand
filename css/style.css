@@ -1,36 +1,41 @@
 * {
     font-family: sans-serif;
-  }
-  
+}
 
-  header nav ul {
+header nav ul {
     list-style: none;
-  }
+}
 
-
-  header nav ul li {
+header nav ul li {
     display: inline-block;
     padding: 13px;
     margin-inline: 29px;
-  }
+}
 
-
-  a {
+a {
     font-weight: bold;
     text-decoration: none;
     color: black;
-  }
+}
 
-  footer {
-      font-weight: bold;
-      padding: 5px;
-      position: static;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: antiquewhite;
-  }
-  nav {
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    background-color: #fffcf9;
+}
+
+footer {
+    font-weight: bold;
+    padding: 5px;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #faebd7;
+}
+
+nav {
     font-weight: bold;
     background-color: antiquewhite;
 }
