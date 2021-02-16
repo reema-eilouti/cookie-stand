@@ -39,3 +39,8 @@ nav {
     font-weight: bold;
     background-color: antiquewhite;
 }
+
+table, tr, th, td {
+  text-align: center;
+  border: 1px solid black;
+}
