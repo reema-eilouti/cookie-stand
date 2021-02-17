@@ -37,104 +37,66 @@ function createTableFooter() {
     footerRowEl.appendChild(tfEl);
     tfEl.textContent = 'Totals';
 
-    let totalColumn1 = 0;
-    let totalColumn2 = 0;
-    let totalColumn3 = 0;
-    let totalColumn4 = 0;
-    let totalColumn5 = 0;
-    let totalColumn6 = 0;
-    let totalColumn7 = 0;
-    let totalColumn8 = 0;
-    let totalColumn9 = 0;
-    let totalColumn10 = 0;
-    let totalColumn11 = 0;
-    let totalColumn12 = 0;
-    let totalColumn13 = 0;
-    let totalColumn14 = 0;
-    let totalColumn15 = 0;
+    let totalColumns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     for (row = 1; row < tableEl.rows.length - 1; row++) {
         for (column = 1; column <= 15; column++) {
-            console.log(tableEl.rows[row].cells[column].innerText);
             switch (column) {
-                case 1: totalColumn1 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 2: totalColumn2 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 3: totalColumn3 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 4: totalColumn4 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 5: totalColumn5 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 6: totalColumn6 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 7: totalColumn7 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 8: totalColumn8 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 9: totalColumn9 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 10: totalColumn10 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 11: totalColumn11 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 12: totalColumn12 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 13: totalColumn13 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 14: totalColumn14 += Number(tableEl.rows[row].cells[column].innerText); break;
-                case 15: totalColumn15 += Number(tableEl.rows[row].cells[column].innerText); break;
+                case 1:
+                    totalColumns[0] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 2:
+                    totalColumns[1] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 3:
+                    totalColumns[2] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 4:
+                    totalColumns[3] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 5:
+                    totalColumns[4] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 6:
+                    totalColumns[5] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 7:
+                    totalColumns[6] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 8:
+                    totalColumns[7] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 9:
+                    totalColumns[8] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 10:
+                    totalColumns[9] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 11:
+                    totalColumns[10] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 12:
+                    totalColumns[11] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 13:
+                    totalColumns[12] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 14:
+                    totalColumns[13] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
+                case 15:
+                    totalColumns[14] += Number(tableEl.rows[row].cells[column].innerText);
+                    break;
             }
         }
     }
 
-    let td01El = document.createElement('td');
-    footerRowEl.appendChild(td01El);
-    td01El.textContent = totalColumn1;
+    for (let counter = 0; counter < 15; counter++) {
+        let tdElement = document.createElement('td');
+        footerRowEl.appendChild(tdElement);
+        tdElement.textContent = totalColumns[counter];
+    }
 
-    let td02El = document.createElement('td');
-    footerRowEl.appendChild(td02El);
-    td02El.textContent = totalColumn2;
-
-    let td03El = document.createElement('td');
-    footerRowEl.appendChild(td03El);
-    td03El.textContent = totalColumn3;
-
-    let td04El = document.createElement('td');
-    footerRowEl.appendChild(td04El);
-    td04El.textContent = totalColumn4;
-
-    let td05El = document.createElement('td');
-    footerRowEl.appendChild(td05El);
-    td05El.textContent = totalColumn5;
-
-    let td06El = document.createElement('td');
-    footerRowEl.appendChild(td06El);
-    td06El.textContent = totalColumn6;
-
-    let td07El = document.createElement('td');
-    footerRowEl.appendChild(td07El);
-    td07El.textContent = totalColumn7;
-
-    let td08El = document.createElement('td');
-    footerRowEl.appendChild(td08El);
-    td08El.textContent = totalColumn8;
-
-    let td09El = document.createElement('td');
-    footerRowEl.appendChild(td09El);
-    td09El.textContent = totalColumn9;
-
-    let td10El = document.createElement('td');
-    footerRowEl.appendChild(td10El);
-    td10El.textContent = totalColumn10;
-
-    let td11El = document.createElement('td');
-    footerRowEl.appendChild(td11El);
-    td11El.textContent = totalColumn11;
-
-    let td12El = document.createElement('td');
-    footerRowEl.appendChild(td12El);
-    td12El.textContent = totalColumn12;
-
-    let td13El = document.createElement('td');
-    footerRowEl.appendChild(td13El);
-    td13El.textContent = totalColumn13;
-
-    let td14El = document.createElement('td');
-    footerRowEl.appendChild(td14El);
-    td14El.textContent = totalColumn14;
-
-    let td15El = document.createElement('td');
-    footerRowEl.appendChild(td15El);
-    td15El.textContent = totalColumn15;
 }
 
 function getRandomNumber(min, max) {
@@ -148,13 +110,13 @@ function Branch(name) {
     this.averageCookiesPerCustomer = 0;
 };
 
-Branch.prototype.setMinimumCustomersPerHour = function (min, max) { this.minimumCustomersPerHour = getRandomNumber(min, max); };
+Branch.prototype.setMinimumCustomersPerHour = function(min, max) { this.minimumCustomersPerHour = getRandomNumber(min, max); };
 
-Branch.prototype.setMaximumCustomersPerHour = function (min, max) { this.maximumCustomersPerHour = getRandomNumber(min, max); };
+Branch.prototype.setMaximumCustomersPerHour = function(min, max) { this.maximumCustomersPerHour = getRandomNumber(min, max); };
 
-Branch.prototype.setAverageCookiesPerCustomer = function (min, max) { this.averageCookiesPerCustomer = getRandomNumber(min, max); };
+Branch.prototype.setAverageCookiesPerCustomer = function(min, max) { this.averageCookiesPerCustomer = getRandomNumber(min, max); };
 
-Branch.prototype.render = function () {
+Branch.prototype.render = function() {
 
     let dataRowEl = document.createElement('tr');
     tableEl.appendChild(dataRowEl);
@@ -203,5 +165,30 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+
+
+let form = document.getElementById("newBranch");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    console.log(event.target);
+
+    let name = event.target.branchName.value;
+
+    let branch = new Branch(name);
+
+    branch.render();
+
+    form.reset();
+
+    lastRowIndex = tableEl.rows.length - 2
+
+    tableEl.deleteRow(lastRowIndex)
+
+    createTableFooter();
+
+})
 
 createTableFooter();
