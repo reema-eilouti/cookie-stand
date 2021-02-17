@@ -2,6 +2,11 @@
     font-family: sans-serif;
 }
 
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
 header nav ul {
     list-style: none;
 }
@@ -25,6 +30,12 @@ a {
     background-color: #fffcf9;
 }
 
+#merch {
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 200px;
+}
+
 footer {
     font-weight: bold;
     padding: 5px;
@@ -32,7 +43,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #faebd7;
+    background-color: antiquewhite;
 }
 
 nav {
