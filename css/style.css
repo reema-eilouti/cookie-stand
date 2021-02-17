@@ -40,7 +40,10 @@ nav {
     background-color: antiquewhite;
 }
 
-table, tr, th, td {
-  text-align: center;
-  border: 1px solid black;
+table,
+tr,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
 }
